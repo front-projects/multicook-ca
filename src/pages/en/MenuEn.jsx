@@ -1,3 +1,3 @@
 export default function MenuEn() {
-    return <div>Menu</div>
+  return <div>Menu</div>;
 }
