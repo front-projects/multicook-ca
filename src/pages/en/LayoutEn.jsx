@@ -1,14 +1,15 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import HeaderEn from '../../components/Header/HeaderEn';
 import FooterEn from '../../components/Footer/FooterEn';
-import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
 
 export default function LayoutEn() {
+  const location = useLocation();
+  const { pathname } = location;
 
-
-  useEffect(() => {
-    scrollTo(0, 0)
-  }, [])
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname])
   return (
     <div className="page">
       <HeaderEn />

@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 export default function HeaderEn() {
+  const [open, setOpen] = useState();
+
   return (
-    <header className="header" data-block="header">
+    <header className={`header ${open ? 'open' : ''}`} data-block="header">
       <nav className="header__container container nav">
         <Link to="/en" className="logo" onClick={() => scrollTo(0, 0)}>
           <svg className="logo__img">
@@ -94,7 +97,11 @@ export default function HeaderEn() {
           </div>
         </div>
 
-        <div className="header__burger" data-btn="burger">
+        <div
+          className="header__burger"
+          data-btn="burger"
+          onClick={() => setOpen(!open)}
+        >
           <button className="burger" aria-label="burger">
             <span className="burger__line burger__line--first"></span>
             <span className="burger__line burger__line--second"></span>
@@ -106,62 +113,62 @@ export default function HeaderEn() {
             className="header-mobile__content header-mobile__content--visible"
             data-content="main"
           >
-            <ul className="nav-list">
+            <ul className="nav-list" onClick={() => setOpen(false)}>
               <li>
-                <a
-                  href="https://multicook-franchise.com/en/shops"
+                <Link
+                  to="/en/shops"
                   className="nav-list__link hover"
                   data-content="Shops"
                 >
                   Shops
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://multicook-franchise.com/en/menu"
+                <Link
+                  to="/en/menu"
                   className="nav-list__link hover"
                   data-content="Menu"
                 >
                   Menu
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://multicook-franchise.com/en/franchise"
+                <Link
+                  to="/en/franchise"
                   className="nav-list__link hover"
                   data-content="Franchise"
                 >
                   Franchise
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://multicook-franchise.com/en/blog"
+                <Link
+                  to="/en/blog"
                   className="nav-list__link hover"
                   data-content="Blog"
                 >
                   Blog
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://multicook-franchise.com/en/contacts"
+                <Link
+                  to="/en/contacts"
                   className="nav-list__link hover"
                   data-content="Contacts"
                 >
                   Contacts
-                </a>
+                </Link>
               </li>
             </ul>
-            <a
+            {/* <a
               href="https://multicook-franchise.com/en/login"
               className="header-mobile__btn btn btn-red"
             >
               Log in
-            </a>
+            </a> */}
 
             <div className="header-mobile__actions">
-              <button className="header-mobile__action" data-btn="location">
+              {/* <button className="header-mobile__action" data-btn="location">
                 <svg className="header-mobile__icon icon">
                   <use xlinkHref="images/pin.svg#pin"></use>
                 </svg>
@@ -169,7 +176,7 @@ export default function HeaderEn() {
                 <svg className="header-mobile__arrow icon">
                   <use xlinkHref="images/arrow.svg#arrow"></use>
                 </svg>
-              </button>
+              </button> */}
 
               <button className="header-mobile__action" data-btn="language">
                 <svg className="header-mobile__icon icon">

@@ -11,7 +11,7 @@ export const darkTheme = [
     elementType: 'labels.icon',
     stylers: [
       {
-        visibility: 'off',
+        visibility: 'simplified',
       },
     ],
   },
