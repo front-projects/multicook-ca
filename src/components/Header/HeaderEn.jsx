@@ -3,6 +3,9 @@ import { Link, NavLink } from 'react-router-dom';
 
 export default function HeaderEn() {
   const [open, setOpen] = useState();
+  const [langOpen, setLangOpen] = useState(false);
+
+  const lang = localStorage.getItem('lang');
 
   return (
     <header className={`header ${open ? 'open' : ''}`} data-block="header">
@@ -57,42 +60,50 @@ export default function HeaderEn() {
         </ul>
 
         <div className="header__actions">
-          <div className="languages" data-block="languages">
+          <div className={`languages ${langOpen ? 'open' : ''}`} data-block="languages">
             <button
               type="button"
               className="languages__placeholder"
-              data-languages="top"
+              onClick={() => setLangOpen(!langOpen)}
             >
               <svg className="languages__icon icon">
                 <use xlinkHref="images/arrow.svg#arrow"></use>
               </svg>
-              en
+              {lang ? lang : 'en'}
             </button>
 
             <div className="languages-list" data-languages="list">
               <ul className="languages-list__content">
                 <li className="languages-list__item">
-                  <a
-                    href="https://multicook-franchise.com/uk"
+                  <Link
+                    to="/ua"
+                    onClick={() => {
+                      localStorage.setItem('lang', 'ua')
+                      setLangOpen(false);
+                    }}
                     className="languages-list__link"
                   >
                     uk
-                  </a>
+                  </Link>
                 </li>
                 <li className="languages-list__item">
-                  <a
-                    href="https://multicook-franchise.com/bg"
+                  <Link
+                    to="/en"
+                    onClick={() => {
+                      localStorage.setItem('lang', 'en')
+                      setLangOpen(false);
+                    }}
                     className="languages-list__link"
                   >
-                    bg
-                  </a>
+                    en
+                  </Link>
                 </li>
               </ul>
-              <button className="languages-list__btn" data-languages="btn">
+              {/* <button className="languages-list__btn" data-languages="btn">
                 <svg className="icon">
                   <use xlinkHref="images/arrow.svg#arrow"></use>
                 </svg>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
@@ -115,49 +126,49 @@ export default function HeaderEn() {
           >
             <ul className="nav-list" onClick={() => setOpen(false)}>
               <li>
-                <Link
+                <NavLink
                   to="/en/shops"
-                  className="nav-list__link hover"
+                  className={`nav-list__link hover ${({ isActive }) => (isActive ? 'text-red-600' : '')}`}
                   data-content="Shops"
                 >
                   Shops
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to="/en/menu"
-                  className="nav-list__link hover"
+                  className={`nav-list__link hover ${({ isActive }) => (isActive ? 'text-red-600' : '')}`}
                   data-content="Menu"
                 >
                   Menu
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to="/en/franchise"
-                  className="nav-list__link hover"
+                  className={`nav-list__link hover ${({ isActive }) => (isActive ? 'text-red-600' : '')}`}
                   data-content="Franchise"
                 >
                   Franchise
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to="/en/blog"
-                  className="nav-list__link hover"
+                  className={`nav-list__link hover ${({ isActive }) => (isActive ? 'text-red-600' : '')}`}
                   data-content="Blog"
                 >
                   Blog
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link
+                <NavLink
                   to="/en/contacts"
-                  className="nav-list__link hover"
+                  className={`nav-list__link hover ${({ isActive }) => (isActive ? 'text-red-600' : '')}`}
                   data-content="Contacts"
                 >
                   Contacts
-                </Link>
+                </NavLink>
               </li>
             </ul>
             {/* <a
@@ -177,8 +188,54 @@ export default function HeaderEn() {
                   <use xlinkHref="images/arrow.svg#arrow"></use>
                 </svg>
               </button> */}
+              <div className={`languages ${langOpen ? 'open' : ''}`} data-block="languages">
+                <button
+                  type="button"
+                  className="languages__placeholder"
+                  onClick={() => setLangOpen(!langOpen)}
+                >
+                  <svg className="languages__icon icon">
+                    <use xlinkHref="images/arrow.svg#arrow"></use>
+                  </svg>
+                  {lang ? lang : 'en'}
+                </button>
 
-              <button className="header-mobile__action" data-btn="language">
+                <div className="languages-list" data-languages="list">
+                  <ul className="languages-list__content">
+                    <li className="languages-list__item">
+                      <Link
+                        to="/ua"
+                        onClick={() => {
+                          localStorage.setItem('lang', 'ua')
+                          setLangOpen(false);
+                        }}
+                        className="languages-list__link"
+                      >
+                        uk
+                      </Link>
+                    </li>
+                    <li className="languages-list__item">
+                      <Link
+                        to="/en"
+                        onClick={() => {
+                          localStorage.setItem('lang', 'en')
+                          setLangOpen(false);
+                        }}
+                        className="languages-list__link"
+                      >
+                        en
+                      </Link>
+                    </li>
+                  </ul>
+                  {/* <button className="languages-list__btn" data-languages="btn">
+                <svg className="icon">
+                  <use xlinkHref="images/arrow.svg#arrow"></use>
+                </svg>
+              </button> */}
+                </div>
+              </div>
+
+              {/* <button className="header-mobile__action" data-btn="language">
                 <svg className="header-mobile__icon icon">
                   <use xlinkHref="images/globe.svg#globe"></use>
                 </svg>
@@ -186,7 +243,7 @@ export default function HeaderEn() {
                 <svg className="header-mobile__arrow icon">
                   <use xlinkHref="images/arrow.svg#arrow"></use>
                 </svg>
-              </button>
+              </button> */}
             </div>
           </div>
 
@@ -649,6 +706,6 @@ export default function HeaderEn() {
         </div>
       </nav>
       <div className="header__overlay" data-btn="close"></div>
-    </header>
+    </header >
   );
 }

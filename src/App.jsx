@@ -14,8 +14,19 @@ import BlogPageEn from './pages/en/BlogPageEn';
 import StandardMenu from './pages/en/StandardMenu';
 import StandardProductPage from './pages/en/StandardProdutPage';
 import ProductPageEn from './pages/en/ProductPageEn';
+import axios from 'axios';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(()=>{
+    const fetchData = async () =>{
+        const response = await axios.get('https://pizza-ar-8ac68-default-rtdb.firebaseio.com/.json');
+        console.log(response.data)
+    }
+
+    fetchData();
+  },[])
+  
   return (
     <Router>
       <Routes>

@@ -129,7 +129,7 @@ export default function Map({ search }) {
                       }}
                     ></Select>
 
-                    <ul className="dropdown-list" data-list="shops">
+                    {/* <ul className="dropdown-list" data-list="shops">
                       <li className="hide">
                         <button
                           type="button"
@@ -150,7 +150,7 @@ export default function Map({ search }) {
                           Batumi, Batumi. Vakhtang Gorgasali str. 147
                         </button>{' '}
                       </li>
-                    </ul>
+                    </ul> */}
                   </div>
                 </div>
               </div>

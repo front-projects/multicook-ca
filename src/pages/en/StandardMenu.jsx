@@ -87,6 +87,7 @@ export default function StandardMenu() {
                       </button>
                     </NavLink>
                   </li>
+                  
                   <li>
                     <NavLink
                       to="/en/menu/standard-menu/mlinci"
@@ -182,7 +183,7 @@ export default function StandardMenu() {
           <div className="menu-page__content">
             <Outlet />
           </div>
-          <div className="menu-page__premium">
+          {/* <div className="menu-page__premium">
             <h2 className="menu-page__title title">Premium menu</h2>
             <div className="menu-page__content menu-page__content--higher">
               <a
@@ -298,7 +299,7 @@ export default function StandardMenu() {
                 <h3 className="product__title">Соуса</h3>
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </main>
