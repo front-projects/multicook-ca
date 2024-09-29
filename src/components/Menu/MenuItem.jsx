@@ -29,7 +29,7 @@ export default function MenuItem({ product, to, category }) {
               : 'https://res.cloudinary.com/dn2ix40dp/image/upload/v1727605044/gb_logo_g8ygvg.svg'
           }
           alt="image"
-          className="object-fit rounded-xl max-h-[174px]"
+          className="object-fit rounded-xl max-h-[174px] max-sm:h-[114px] max-sm:max-h-[114px]"
         />
         <h3 className='font-["Arial"]'>{product.nameEn}</h3>
         <p className="text-[#8f5633] font-['Arial']">{product.price}</p>
