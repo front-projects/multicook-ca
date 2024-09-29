@@ -15,8 +15,39 @@ import {
   MenuIconVareniki,
 } from '../../components/UI/icons';
 import Advantage from '../../components/Home/Advantage';
+import { useEffect, useState } from 'react';
+import { getStores } from '../../utils/requests';
 
 export default function HomePageEn() {
+  const [stores, setStores] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getStores();
+      const array = Object.entries(data).map(([key, value]) => {
+        return {
+          ...value,
+          id: key,
+        };
+      });
+      setStores(array);
+    };
+    fetchData();
+  }, []);
+
+  const groupedData = stores
+    ? stores.reduce((acc, item) => {
+        if (!acc[item.city]) {
+          acc[item.city] = [];
+        }
+        acc[item.city].push({
+          address: item.address,
+          open: item.open,
+        });
+        return acc;
+      }, {})
+    : [];
+
   return (
     <main className="page__main">
       <section className="banner">
@@ -29,6 +60,9 @@ export default function HomePageEn() {
               Homemade semi-finished products from Galya Baluvana. We cook - you
               relax
             </p>
+            <p className='mt-2 font-bold'>
+            2340 Lake Shore Blvd West, Toronto 
+            </p>
             <div className="banner__btns btns">
               <Link
                 to="#"
@@ -36,7 +70,7 @@ export default function HomePageEn() {
               >
                 Order delivery
               </Link>
-              <Link to="/en/menu" className="btn btn-transparent">
+              <Link to="/en/menu" className=" text-black">
                 Go to the menu
               </Link>
             </div>
@@ -48,6 +82,32 @@ export default function HomePageEn() {
               className="rounded-[14px] max-sm:rounded-[34px]"
               decoding="async"
             />
+          </div>
+        </div>
+      </section>
+      <section className="menu mb-10">
+        <div className='menu__container container'>
+          <div className="shops__content">
+            <h2 className="title title-lg">Our stores</h2>
+            <div>
+              {Object.entries(groupedData).map(([key, value]) => {
+                return (
+                  <div key={key}>
+                    <h3 className="shops__city">{key}</h3>
+                    <ul className="shops__list">
+                      {value.map((street) => (
+                        <li key={street.address} className="shops__item">
+                          {street.address}{' '}
+                          {!street.open && (
+                            <span className="text-[#8f5633]">(Open soon) </span>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
@@ -70,12 +130,36 @@ export default function HomePageEn() {
                 icon={<MenuIconPelm />}
                 to="/en/menu/dumplings"
               />
-              <HomeMenuItem title="Syrnyky" icon={<MenuIconSirniki />} to="/en/menu/syrnyky"/>
-              <HomeMenuItem title="Cabbage rolls" icon={<MenuIconGolubci />} to="/en/menu/cabbage-rolls"/>
-              <HomeMenuItem title="Other" icon={<MenuIconChef />} to="/en/menu/other"/>
-              <HomeMenuItem title="Chebureki" icon={<MenuIconChebureki />} to="/en/menu/chebureki"/>
-              <HomeMenuItem title="Crepes" icon={<MenuIconMlinci />} to="/en/menu/crepes"/>
-              <HomeMenuItem title="Cutles" icon={<MenuIconKotleti />} to="/en/menu/cutlets"/>
+              <HomeMenuItem
+                title="Syrnyky"
+                icon={<MenuIconSirniki />}
+                to="/en/menu/syrnyky"
+              />
+              <HomeMenuItem
+                title="Cabbage rolls"
+                icon={<MenuIconGolubci />}
+                to="/en/menu/cabbage-rolls"
+              />
+              <HomeMenuItem
+                title="Other"
+                icon={<MenuIconChef />}
+                to="/en/menu/other"
+              />
+              <HomeMenuItem
+                title="Chebureki"
+                icon={<MenuIconChebureki />}
+                to="/en/menu/chebureki"
+              />
+              <HomeMenuItem
+                title="Crepes"
+                icon={<MenuIconMlinci />}
+                to="/en/menu/crepes"
+              />
+              <HomeMenuItem
+                title="Cutles"
+                icon={<MenuIconKotleti />}
+                to="/en/menu/cutlets"
+              />
             </div>
           </div>
           <div className="menu__btns" id="about-us">

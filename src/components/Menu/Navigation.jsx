@@ -31,7 +31,7 @@ export default function MenuNavigation({ open, onClose }) {
       className={`w-[295px] 
         max-sm:w-[90vw] max-sm:gap-4 max-sm:h-[75dvh] max-sm:overflow-y-auto max-sm:py-10 max-sm:rounded-xl 
         max-sm:border-[1px] max-sm:border-gray-600/40 max-sm:top-40 
-        bg-[#171717] max-sm:z-10 flex flex-col gap-2 max-sm:fixed 
+        bg-white max-sm:z-10 flex flex-col gap-2 max-sm:fixed 
         max-sm:px-2 transition-transform duration-500 ${open ? 'max-sm:translate-x-[0]' : 'max-sm:translate-x-[-100vw]'}`}
     >
       <h3 className="pb-2 border-b-[1px] border-gray-600/40 flex justify-between max-sm:pr-10">

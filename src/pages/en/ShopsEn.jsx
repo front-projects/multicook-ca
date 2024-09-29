@@ -36,7 +36,7 @@ export default function ShopsEn() {
 
   return (
     <main className="page__main">
-      <section className="shops">
+      <section className="shops min-h-[100dvh]">
         <div className="shops__container container">
           <Map search={true} />
           <div className="shops__content">

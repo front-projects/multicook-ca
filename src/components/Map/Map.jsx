@@ -41,7 +41,6 @@ export default function Map({ search }) {
           },
         };
       });
-      console.log(array);
 
       array.forEach((store) => {
         arr.push({
@@ -116,7 +115,7 @@ export default function Map({ search }) {
             {search && (
               <div className="shops__search">
                 <div className="search-map">
-                  <div className="search-map__text">
+                  <div className="search-map__text text-white">
                     Enter the address or city in which you are interested in the
                     store.
                   </div>

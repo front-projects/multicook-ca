@@ -10,7 +10,7 @@ export default function StandardMenu() {
 
   return (
     <main className="page__main">
-      <section className="menu-page">
+      <section className="menu-page min-h-[100vh]">
         <div className="container">
           <div className="menu-page__top">
             <h2 className="title title-lg">Menu Galya Baluvana</h2>

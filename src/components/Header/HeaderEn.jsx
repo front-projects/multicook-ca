@@ -52,7 +52,11 @@ export default function HeaderEn() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/en#about-us" className={`nav-list__link hover`} id="about-us-link">
+            <NavLink
+              to="/en#about-us"
+              className={`nav-list__link hover`}
+              id="about-us-link"
+            >
               About<span className="ml-2">Us</span>
             </NavLink>
           </li>
@@ -67,6 +71,18 @@ export default function HeaderEn() {
         </ul>
 
         <div className="header__actions">
+          <a
+            href="https://www.instagram.com/multicook.ca?igsh=OXJ3bHphOTBuY3U3&utm_source=qr"
+            className="socials-list__link"
+            target="_blank"
+          >
+            <svg
+              className="socials-list__icon socials-list__icon--red"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use xlinkHref="./images/instagram.svg#instagram"></use>
+            </svg>
+          </a>
           <div
             className={`languages ${langOpen ? 'open' : ''}`}
             data-block="languages"
@@ -113,15 +129,29 @@ export default function HeaderEn() {
           </div>
         </div>
 
-        <div
-          className="header__burger"
-          data-btn="burger"
-          onClick={() => setOpen(!open)}
-        >
-          <button className="burger" aria-label="burger">
-            <span className="burger__line burger__line--first"></span>
-            <span className="burger__line burger__line--second"></span>
-          </button>
+        <div className='flex gap-4 items-center '>
+          <a
+            href="https://www.instagram.com/multicook.ca?igsh=OXJ3bHphOTBuY3U3&utm_source=qr"
+            className="socials-list__link sm:hidden"
+            target="_blank"
+          >
+            <svg
+              className="socials-list__icon socials-list__icon--red"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <use xlinkHref="./images/instagram.svg#instagram"></use>
+            </svg>
+          </a>
+          <div
+            className="header__burger"
+            data-btn="burger"
+            onClick={() => setOpen(!open)}
+          >
+            <button className="burger" aria-label="burger">
+              <span className="burger__line burger__line--first"></span>
+              <span className="burger__line burger__line--second"></span>
+            </button>
+          </div>
         </div>
 
         <div className="header-mobile">
@@ -151,7 +181,8 @@ export default function HeaderEn() {
               <li>
                 <NavLink
                   to="/en#about-us"
-                  className={`nav-list__link hover ${({ isActive }) => (isActive ? 'text-red-600' : '')}`} id="about-us-link-mob"
+                  className={`nav-list__link hover ${({ isActive }) => (isActive ? 'text-red-600' : '')}`}
+                  id="about-us-link-mob"
                   data-content="About Us"
                 >
                   About Us
