@@ -6,7 +6,7 @@ export default function ContactsEn() {
         <div className="contacts-page__content">
           <h2 className="contacts-page__title contacts-page__title--mobile title">Our Contacts</h2>
           <div className="contacts-page__img">
-            <img src="./images/shop.webp" alt="Shop Multi Cook" width="1" height="1" decoding="async" />
+            <img src="/images/contacts.png" alt="Shop Multi Cook" width="1" height="1" decoding="async" />
           </div>
 
           <div className="contacts-page__inner">
@@ -51,7 +51,7 @@ export default function ContactsEn() {
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.facebook.com/multicookfranch" className="socials-list__link" target="_blank">
+                      <a href="https://m.facebook.com/61561417168302/" className="socials-list__link" target="_blank">
                         <svg className="socials-list__icon socials-list__icon--red" xmlns="http://www.w3.org/2000/svg">
                           <use xlinkHref="./images/facebook.svg#facebook">
                           </use>
@@ -59,7 +59,7 @@ export default function ContactsEn() {
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.instagram.com/multicook_franchise?igshid=OGQ5ZDc2ODk2ZA==" className="socials-list__link" target="_blank">
+                      <a href="https://www.instagram.com/multicook.ca?igsh=OXJ3bHphOTBuY3U3&utm_source=qr" className="socials-list__link" target="_blank">
                         <svg className="socials-list__icon socials-list__icon--red" xmlns="http://www.w3.org/2000/svg">
                           <use xlinkHref="./images/instagram.svg#instagram">
                           </use>

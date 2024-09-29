@@ -4,10 +4,22 @@ export default function FooterEn() {
   return (
     <footer className="footer">
       <div className="container footer__container">
-        <Link href="https://multicook-franchise.com/en" className="logo">
+        {/* <Link href="https://multicook-franchise.com/en" className="logo">
           <svg className="logo__img logo__img--large">
             <use xlinkHref="images/mc-logo-white.svg#mc-logo-white"></use>
           </svg>
+        </Link> */}
+        <Link to="/en" className="logo" onClick={() => scrollTo(0, 0)}>
+          <img
+            alt="Головна"
+            decoding="async"
+            src="images/gb_logo.svg"
+            className="w-[120px] h-[120px] max-sm:w-[80px] max-sm:h-[80px]"
+          />
+
+          {/* <svg className="logo__img">
+            <use xlinkHref="images/mc-logo-white.svg#mc-logo-white"></use>
+          </svg> */}
         </Link>
 
         <dl className="footer__content">
@@ -35,14 +47,14 @@ export default function FooterEn() {
                 </li>
                 <li>
                   <Link
-                    to="/en/franchise"
+                    to="/en#about-us"
                     className="footer-list__link hover"
-                    data-content="Franchise"
+                    data-content="About Us"
                   >
-                    Franchise
+                    About Us
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     to="/en/blog"
                     className="footer-list__link hover"
@@ -50,7 +62,7 @@ export default function FooterEn() {
                   >
                     Blog
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     to="/en/contacts"
@@ -69,16 +81,16 @@ export default function FooterEn() {
               <ul className="footer-list">
                 <li>
                   <Link
-                    to="/en/menu/standard-menu/vareniki"
+                    to="/en/menu/pierogy"
                     className="footer-list__link hover"
-                    data-content="Varenyky (dumplings)"
+                    data-content="Varenyky"
                   >
-                    Varenyky (dumplings)
+                    Varenyky
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/en/menu/standard-menu/sirniki"
+                    to="/en/menu/sirniki"
                     className="footer-list__link hover"
                     data-content="Syrnyky (cheese pancakes)"
                   >
@@ -87,25 +99,17 @@ export default function FooterEn() {
                 </li>
                 <li>
                   <Link
-                    to="/en/menu/standard-menu/mlinci"
+                    to="/en/menu/crepes"
                     className="footer-list__link hover"
                     data-content="Crepes"
                   >
                     Crepes
                   </Link>
                 </li>
+              
                 <li>
                   <Link
-                    to="/en/menu/standard-menu/deruni-ta-zrazi"
-                    className="footer-list__link hover"
-                    data-content="Potato fritters (deruny) and Potato zrazy"
-                  >
-                    Potato fritters (deruny) and Potato zrazy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/en/menu/standard-menu/kovbasa-ta-pastet"
+                    to="/en/menu/other"
                     className="footer-list__link hover"
                     data-content="Sausage and Pate"
                   >
@@ -116,7 +120,7 @@ export default function FooterEn() {
               <ul className="footer-list">
                 <li>
                   <Link
-                    to="/en/menu/standard-menu/pelmeni"
+                    to="/en/menu/dumplings"
                     className="footer-list__link hover"
                     data-content="Pelmeni (dumplings)"
                   >
@@ -125,7 +129,7 @@ export default function FooterEn() {
                 </li>
                 <li>
                   <Link
-                    to="/en/menu/standard-menu/cebureki"
+                    to="/en/menu/chebureki"
                     className="footer-list__link hover"
                     data-content="Сhebureki"
                   >
@@ -134,7 +138,7 @@ export default function FooterEn() {
                 </li>
                 <li>
                   <Link
-                    to="/en/menu/standard-menu/kotleti-ta-frikadelki"
+                    to="/en/menu/cutlets"
                     className="footer-list__link hover"
                     data-content="Cutlets and Meatball"
                   >
@@ -143,16 +147,16 @@ export default function FooterEn() {
                 </li>
                 <li>
                   <Link
-                    to="/en/menu/standard-menu/golubci-ta-perec"
+                    to="/en/menu/cabbage-rolls"
                     className="footer-list__link hover"
-                    data-content="Cabbage rolls and Stuffed peppers"
+                    data-content="Cabbage rolls"
                   >
-                    Cabbage rolls and Stuffed peppers
+                    Cabbage rolls
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/en/menu/standard-menu/inse"
+                    to="/en/menu/other"
                     className="footer-list__link hover"
                     data-content="Other"
                   >
@@ -167,7 +171,7 @@ export default function FooterEn() {
             <dd className="footer-block__socials">
               <ul className="socials-list">
                 <li>
-                  <Link
+                  <a
                     href="https://www.youtube.com/channel/UC85Qqq-wFDI1uUThLLGqEdQ"
                     className="socials-list__link"
                     target="_blank"
@@ -175,29 +179,29 @@ export default function FooterEn() {
                     <svg className="socials-list__icon">
                       <use xlinkHref="images/youtube.svg#youtube"></use>
                     </svg>
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
-                    href="https://www.facebook.com/multicookfranch"
+                  <a
+                    href="https://m.facebook.com/61561417168302/"
                     className="socials-list__link"
                     target="_blank"
                   >
                     <svg className="socials-list__icon">
                       <use xlinkHref="images/facebook.svg#facebook"></use>
                     </svg>
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
-                    href="https://www.instagram.com/multicook_franchise?igshid=OGQ5ZDc2ODk2ZA=="
+                  <a
+                    href="https://www.instagram.com/multicook.ca?igsh=OXJ3bHphOTBuY3U3&utm_source=qr"
                     className="socials-list__link"
                     target="_blank"
                   >
                     <svg className="socials-list__icon">
                       <use xlinkHref="images/instagram.svg#instagram"></use>
                     </svg>
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </dd>
@@ -205,16 +209,7 @@ export default function FooterEn() {
         </dl>
       </div>
       <div className="copyright">
-        Developed by
-        <Link
-          href="https://gigaprog.com/"
-          className="copyright__img"
-          target="_blank"
-        >
-          <svg>
-            <use xlinkHref="images/gigaprog-logo-white.svg#gigaprog-logo-white"></use>
-          </svg>
-        </Link>
+        Galya Baluvana
         ©<b>2024</b>
       </div>
     </footer>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Map from '../../components/Map/Map';
-import { getStores } from '../../utils/getStores';
+import { getStores } from '../../utils/requests';
 
 export default function ShopsEn() {
   const [stores, setStores] = useState();
@@ -8,7 +8,13 @@ export default function ShopsEn() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await getStores();
-      setStores(data);
+      const array = Object.entries(data).map(([key, value]) => {
+        return {
+          ...value,
+          id: key,
+        };
+      });
+      setStores(array);
     };
     fetchData();
   }, []);
@@ -18,7 +24,10 @@ export default function ShopsEn() {
         if (!acc[item.city]) {
           acc[item.city] = [];
         }
-        acc[item.city].push(item.address);
+        acc[item.city].push({
+          address: item.address,
+          open: item.open,
+        });
         return acc;
       }, {})
     : [];
@@ -39,11 +48,13 @@ export default function ShopsEn() {
                     <h3 className="shops__city">{key}</h3>
                     <ul className="shops__list">
                       {value.map((street) => (
-                        <li key={street} className="shops__item">
-                          {street}
+                        <li key={street.address} className="shops__item">
+                          {street.address}{' '}
+                          {!street.open && (
+                            <span className="text-[#8f5633]">(Open soon) </span>
+                          )}
                         </li>
                       ))}
-                      {/* <li className="shops__item">Produkcyjna, 84 lok. 50</li> */}
                     </ul>
                   </div>
                 );

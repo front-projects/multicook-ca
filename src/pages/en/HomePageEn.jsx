@@ -1,5 +1,20 @@
 import { Link } from 'react-router-dom';
 import Map from '../../components/Map/Map';
+import HomeMenuItem from '../../components/Home/HomeMenuItem';
+import {
+  AdvFirst,
+  AdvSecond,
+  AdvThird,
+  MenuIconChebureki,
+  MenuIconChef,
+  MenuIconGolubci,
+  MenuIconKotleti,
+  MenuIconMlinci,
+  MenuIconPelm,
+  MenuIconSirniki,
+  MenuIconVareniki,
+} from '../../components/UI/icons';
+import Advantage from '../../components/Home/Advantage';
 
 export default function HomePageEn() {
   return (
@@ -8,47 +23,68 @@ export default function HomePageEn() {
         <div className="container banner__container">
           <div className="banner__content">
             <h1 className="banner__title title">
-              The most popular dishes at Multi Cook
+              Delivery of homemade semi-finished products
             </h1>
-            <p>
-              In order to see the menu with prices, you need to go to the «Menu»
-              section and select a city.
+            <p className="text-[24px] mt-10">
+              Homemade semi-finished products from Galya Baluvana. We cook - you
+              relax
             </p>
             <div className="banner__btns btns">
-              <Link to="/en/franchise" className="btn btn-red">
-                Buy franchise
+              <Link
+                to="#"
+                className="btn hover:bg-[#8f5633]/50 rounded-xl bg-[#8f5633]"
+              >
+                Order delivery
               </Link>
               <Link to="/en/menu" className="btn btn-transparent">
                 Go to the menu
               </Link>
             </div>
           </div>
-          <div className="banner-img">
-            <svg className="banner-img__like-red">
-              <use xlinkHref="images/like-red.svg#like-red"></use>
-            </svg>
-            <svg className="banner-img__like-blue">
-              <use xlinkHref="images/like-blue.svg#like-blue"></use>
-            </svg>
-            <svg className="banner-img__shine-direct">
-              <use xlinkHref="images/shine-direct.svg#shine-direct"></use>
-            </svg>
-            <svg className="banner-img__shine-direct banner-img__shine-direct--right">
-              <use xlinkHref="images/shine-direct.svg#shine-direct"></use>
-            </svg>
-            <svg className="banner-img__shine-wave">
-              <use xlinkHref="images/shine-wave.svg#shine-wave"></use>
-            </svg>
-            <svg className="banner-img__shine-wave banner-img__shine-wave--right">
-              <use xlinkHref="images/shine-wave.svg#shine-wave"></use>
-            </svg>
+          <div className="banner-img rounded-[54px] mt-[-40px]">
             <img
-              src="images/deruny.webp"
-              alt="Plate with deruny"
-              width="1"
-              height="1"
+              src="/images/photo-main-screen.jpg"
+              alt=""
+              className="rounded-[14px] max-sm:rounded-[34px]"
               decoding="async"
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="menu">
+        <div className="menu__container container">
+          <h2 className="menu__title title title-lg">Menu Galya Baluvana</h2>
+          <p className="menu__text">
+            In order to see the menu with prices, you need to go to the «Menu»
+          </p>
+          <div className="menu__content">
+            <div className="grid grid-cols-4 w-full gap-4 max-lg:grid-cols-3 max-sm:grid-cols-2">
+              <HomeMenuItem
+                title="Varenyky"
+                icon={<MenuIconVareniki />}
+                to="/en/menu/pierogy"
+              />
+              <HomeMenuItem
+                title="Dumplings"
+                icon={<MenuIconPelm />}
+                to="/en/menu/dumplings"
+              />
+              <HomeMenuItem title="Syrnyky" icon={<MenuIconSirniki />} to="/en/menu/syrnyky"/>
+              <HomeMenuItem title="Cabbage rolls" icon={<MenuIconGolubci />} to="/en/menu/cabbage-rolls"/>
+              <HomeMenuItem title="Other" icon={<MenuIconChef />} to="/en/menu/other"/>
+              <HomeMenuItem title="Chebureki" icon={<MenuIconChebureki />} to="/en/menu/chebureki"/>
+              <HomeMenuItem title="Crepes" icon={<MenuIconMlinci />} to="/en/menu/crepes"/>
+              <HomeMenuItem title="Cutles" icon={<MenuIconKotleti />} to="/en/menu/cutlets"/>
+            </div>
+          </div>
+          <div className="menu__btns" id="about-us">
+            <Link
+              to="/en/menu"
+              className="menu__btn btn bg-[#8f5633] hover:bg-[#8f5633]/50 rounded-xl"
+            >
+              Go to the menu
+            </Link>
           </div>
         </div>
       </section>
@@ -56,383 +92,104 @@ export default function HomePageEn() {
       <section className="records">
         <div className="records__container container">
           <div className="records__title">
-            <h2 className="title title-md">
-              Every day we set new records for ourselves
-            </h2>
+            <h2 className="title title-md">Our advantages</h2>
           </div>
           <div className="records__content" data-block="counter-cards">
-            <div className="card-record" data-counter="card">
-              <div className="card-record__title">Shops in Europe</div>
-              <div
-                className="card-record__num"
-                data-counter="num"
-                data-number="700"
-              >
-                700
-              </div>
-              <svg className="card-record__icon card-record__icon--bottom-right">
-                <use xlinkHref="images/shine-wave.svg#shine-wave"></use>
-              </svg>
-            </div>
-            <div className="card-record" data-counter="card">
-              <div className="card-record__title">Workplaces</div>
-              <div
-                className="card-record__num"
-                data-counter="num"
-                data-number="9000"
-              >
-                9000
-              </div>
-              <svg className="card-record__icon card-record__icon--top-left">
-                <use xlinkHref="images/shine-wave.svg#shine-wave"></use>
-              </svg>
-            </div>
-            <div className="card-record" data-counter="card">
-              <div className="card-record__title">Various dishes</div>
-              <div
-                className="card-record__num"
-                data-counter="num"
-                data-number="60"
-              >
-                60
-              </div>
-              <svg className="card-record__icon card-record__icon--bottom-left">
-                <use xlinkHref="images/shine-wave.svg#shine-wave"></use>
-              </svg>
-            </div>
+            <Advantage
+              title="Open production"
+              icon={<AdvFirst />}
+              desc="Cooking behind glass in the
+in the open kitchen"
+            />
+            <Advantage
+              title="Wide range of products"
+              icon={<AdvSecond />}
+              desc="A variety of breakfast, lunch and dinner options"
+            />
+            <Advantage
+              title="High quality"
+              icon={<AdvThird />}
+              desc="We use only natural fresh products"
+            />
           </div>
         </div>
       </section>
 
-      <section className="menu">
-        <div className="menu__container container">
-          <h2 className="menu__title title title-lg">Menu Multi Cook</h2>
-          <p className="menu__text">
-            In order to see the menu with prices, you need to go to the «Menu»
-            section and select a city
-          </p>
-          <div className="menu__content">
-            <Link to="/en/menu/standard-menu/vareniki" className="product">
-              <img
-                src="images/rN4pZTR6G93tQo6jMtIRiNXSXnQIQf08jt4DxQnL_res600x600_opt.jpg"
-                className="product__img"
-                alt="Varenyky (dumplings)"
-                width="1"
-                height="1"
-                decoding="async"
-              />
-              <h3 className="product__title">Varenyky (dumplings)</h3>
-            </Link>
-            <Link to="/en/menu/standard-menu/pelmeni" className="product">
-              <img
-                src="images/02FwlQo3P68jvMod1aOgTWcUEBQqQ4DcnCvODpp3_res600x600_opt.jpg"
-                className="product__img"
-                alt="Pelmeni (dumplings)"
-                width="1"
-                height="1"
-                decoding="async"
-              />
-              <h3 className="product__title">Pelmeni (dumplings)</h3>
-            </Link>
-            <Link to="/en/menu/standard-menu/sirniki" className="product">
-              <img
-                src="images/PcpuyzWZ70FyL0qC4UFEVCESerswuT0FOkx1F08N_res600x600_opt.jpg"
-                className="product__img"
-                alt="Syrnyky (cheese pancakes)"
-                width="1"
-                height="1"
-                decoding="async"
-              />
-              <h3 className="product__title">Syrnyky (cheese pancakes)</h3>
-            </Link>
-            <Link to="/en/menu/standard-menu/cebureki" className="product">
-              <img
-                src="images/0Z3ffDNAPe7LipYqKyoYcBdlTUDiA6weDgWhDLcO_res600x600_opt.jpg"
-                className="product__img"
-                alt="Сhebureki"
-                width="1"
-                height="1"
-                decoding="async"
-              />
-              <h3 className="product__title">Сhebureki</h3>
-            </Link>
-            <Link to="/en/menu/standard-menu/mlinci" className="product">
-              <img
-                src="images/y4NMFoSvWWq92C9EJhvJupoNmcHj8EY11OzoYkMY_res600x600_opt.jpg"
-                className="product__img"
-                alt="Crepes"
-                width="1"
-                height="1"
-                decoding="async"
-              />
-              <h3 className="product__title">Crepes</h3>
-            </Link>
-            <Link
-              to="/en/menu/standard-menu/kotleti-ta-frikadelki"
-              className="product"
-            >
-              <img
-                src="images/FjKJOXhNK3YFSJ5XQ4DAsqDZJM6rj0QldceiTGZv_res600x600_opt.jpg"
-                className="product__img"
-                alt="Cutlets and Meatball"
-                width="1"
-                height="1"
-                decoding="async"
-              />
-              <h3 className="product__title">Cutlets and Meatball</h3>
-            </Link>
-            <Link
-              to="/en/menu/standard-menu/deruni-ta-zrazi"
-              className="product"
-            >
-              <img
-                src="images/iTJtKt4nFmR2GBtrPgKHJnCtZ3BlODE3ixymL5PP_res600x600_opt.jpg"
-                className="product__img"
-                alt="Potato fritters (deruny) and Potato zrazy"
-                width="1"
-                height="1"
-                decoding="async"
-              />
-              <h3 className="product__title">
-                Potato fritters (deruny) and Potato zrazy
-              </h3>
-            </Link>
-            <Link
-              to="/en/menu/standard-menu/golubci-ta-perec"
-              className="product"
-            >
-              <img
-                src="images/huDewFg98n7jpEeaW6VdSv7hQ81mEID8M3C7Pj8x_res600x600_opt.jpg"
-                className="product__img"
-                alt="Cabbage rolls and Stuffed peppers"
-                width="1"
-                height="1"
-                decoding="async"
-              />
-              <h3 className="product__title">
-                Cabbage rolls and Stuffed peppers
-              </h3>
-            </Link>
-          </div>
-          <div className="menu__btns">
-            <Link to="/en/menu" className="menu__btn btn btn-red">
-              Go to the menu
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="benefits-main">
-        <div className="container">
-          <h2 className="benefits-main__title title title-lg title--dumpling">
-            Why exactly Multi cook?
-          </h2>
-        </div>
-
-        <div className="benefits-main__wrapper">
-          <div className="benefits-main__slider">
-            <div className="swiper mySwiper slider-round" id="slider-round">
-              <ul className="swiper-wrapper slider-round__wrapper">
-                <li className="swiper-slide">
-                  <img
-                    src="images/dumplings-2.webp"
-                    className="slider-round__img"
-                    alt="Dumplings"
-                    width="1"
-                    height="1"
-                    decoding="async"
-                    loading="lazy"
-                  />
-                </li>
-                <li className="swiper-slide">
-                  <img
-                    src="images/workplace.webp"
-                    className="slider-round__img"
-                    alt="Workplace"
-                    width="1"
-                    height="1"
-                    decoding="async"
-                    loading="lazy"
-                  />
-                </li>
-                <li className="swiper-slide">
-                  <img
-                    src="images/varenyky.webp"
-                    className="slider-round__img"
-                    alt="Varenyky"
-                    width="1"
-                    height="1"
-                    decoding="async"
-                    loading="lazy"
-                  />
-                </li>
-                <li className="swiper-slide">
-                  <img
-                    src="images/dumpling-flour.webp"
-                    className="slider-round__img"
-                    alt="Dumplings"
-                    width="1"
-                    height="1"
-                    decoding="async"
-                    loading="lazy"
-                  />
-                </li>
-              </ul>
-              <div className="slider-round__actions">
-                <div className="swiper-pagination"></div>
-                <div className="swiper-button-prev"></div>
-                <div className="swiper-button-next"></div>
-              </div>
+      <section className="w-screen flex items-center justify-center mt-[140px]">
+        <div className="w-[1160px] max-[1160px]:w-[960px] max-sm:w-[90vw]">
+          <h2 className="title title-md">About Us</h2>
+          <div className="flex w-full mt-10 text-[18px] max-sm:flex-col max-sm:gap-4">
+            <div className="border-l-2 border-[#AD8865] w-1/2 pl-4 pr-10 flex flex-col gap-4 max-sm:w-full">
+              <p>
+                Our Galya Baluvana stores are stores of real homemade
+                semi-finished products.
+              </p>
+              <p>
+                Our peculiarity is that everyone can see the cooking process
+                with their own eyes, because the workshops are located directly
+                in the stores behind the glass.
+              </p>
+              <p>
+                The raw materials for our semi-finished products are delivered
+                daily, and the finished products do not stay in cold storage for
+                long.
+              </p>
+            </div>
+            <div className="border-l-2 border-[#AD8865] w-1/2 pl-4 pr-10 flex flex-col gap-4 max-sm:w-full">
+              <p>
+                We use only natural ingredients for our products. And our
+                professional chefs make your favorite dishes with their own
+                hands according to home recipes.
+              </p>
+              <p>
+                We do not prepare a lot of stock. To keep everything fresh, the
+                workshops work every day.
+              </p>
             </div>
           </div>
-
-          <div className="benefits-main__content container">
-            <div className="card-benefit">
+          <div className="grid grid-cols-3 gap-4 mt-14 max-sm:grid-cols-1">
+            <div className="w-full relative h-[200px]">
               <img
-                src="images/onion.png"
-                className="card-benefit__img"
-                alt="Onion"
-                width="1"
-                height="1"
-                decoding="async"
-                loading="lazy"
+                src="/images/onas_image2.jpg"
+                alt=""
+                className="object-cover rounded-xl"
               />
-              <h3 className="card-benefit__title">High quality</h3>
             </div>
-            <div className="card-benefit">
+            <div className="w-full relative h-[200px]">
               <img
-                src="images/leaf.png"
-                className="card-benefit__img"
-                alt="Leaf"
-                width="1"
-                height="1"
-                decoding="async"
-                loading="lazy"
+                src="/images/onas_image3.jpg"
+                alt=""
+                className="object-cover rounded-xl"
               />
-              <h3 className="card-benefit__title">Wide range</h3>
             </div>
-            <div className="card-benefit">
+            <div className="w-full relative h-[200px] max-sm:hidden">
               <img
-                src="images/tomato-front.png"
-                className="card-benefit__img"
-                alt="Tomato"
-                width="1"
-                height="1"
-                decoding="async"
-                loading="lazy"
+                src="/images/onas_image1.jpg"
+                alt=""
+                className="object-cover rounded-xl"
               />
-              <h3 className="card-benefit__title">Open production</h3>
             </div>
           </div>
-        </div>
-        <img
-          src="images/basil.png"
-          className="benefits-main__basil"
-          alt="Basil"
-          width="1"
-          height="1"
-          decoding="async"
-          loading="lazy"
-        />
-      </section>
-
-      <section className="articles">
-        <div className="container">
-          <div className="articles__top">
-            <h2 className="articles__title title title-lg title--tomato">
-              Our blog
+          <div className="w-full mt-20">
+            <h2 className="title title-md ">
+              See the cooking process with your own eyes
             </h2>
-            <a
-              href="https://multicook-franchise.com/en/blog"
-              className="articles__link btn hover"
-              data-content="All articles"
-            >
-              All articles
-            </a>
+            <div className="w-1/2 h-[360px] mt-10 max-sm:w-full">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/8Luq_Bn8uzU?si=MHH7lv5qiy3-KJGn"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpPolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
-
-          <div className="articles__content">
-            <article className="article">
-              <div className="article__img">
-                <Link to="/en/blog/multi-cook-braga-portugaliia-daruje-nezabutni-smakovi-vrazennia">
-                  <img
-                    src="images/K6ctBvQPz6ZuXYxrujUTnpnDihZBc3fQUWgeyIQQ.jpg"
-                    alt="MULTI COOK (Braga, Portugal) – gives an unforgettable taste experience"
-                    width="1"
-                    height="1"
-                    decoding="async"
-                    loading="lazy"
-                  />
-                </Link>
-              </div>
-              <div className="article__content">
-                <Link to="/en/blog/multi-cook-braga-portugaliia-daruje-nezabutni-smakovi-vrazennia">
-                  <h3 className="article__title">
-                    MULTI COOK (Braga, Portugal) – gives an unforgettable taste
-                    experience
-                  </h3>
-                </Link>
-                <time className="article__date date" dateTime="2024-08-26">
-                  26.08.2024
-                </time>
-              </div>
-            </article>
-            <article className="article">
-              <div className="article__img">
-                <Link to="/en/blog/multi-cook-kaunas-litva-gotujetsia-legko-smakuje-neimovirno">
-                  <img
-                    src="images/lc6qfkIsHWjbVHOiqF3sVqaYzp2vtK7JxVKmBA5l.jpg"
-                    alt="MULTI COOK (Kaunas, Lithuania) – easy to prepare, tastes incredible"
-                    width="1"
-                    height="1"
-                    decoding="async"
-                    loading="lazy"
-                  />
-                </Link>
-              </div>
-              <div className="article__content">
-                <Link to="/en/blog/multi-cook-kaunas-litva-gotujetsia-legko-smakuje-neimovirno">
-                  <h3 className="article__title">
-                    MULTI COOK (Kaunas, Lithuania) – easy to prepare, tastes
-                    incredible
-                  </h3>
-                </Link>
-                <time className="article__date date" dateTime="2024-08-26">
-                  26.08.2024
-                </time>
-              </div>
-            </article>
-            <article className="article">
-              <div className="article__img">
-                <Link to="/en/blog/multi-cook-podgorica-cornogoriia">
-                  <img
-                    src="images/K6EzOJNa2jzGdp5ZluTEL0iWDOfPgih76gEI7ZjK.jpg"
-                    alt="MULTI COOK (Подґоріца, Чорногорія) – домашні страви для сімейного затишку"
-                    width="1"
-                    height="1"
-                    decoding="async"
-                    loading="lazy"
-                  />
-                </Link>
-              </div>
-              <div className="article__content">
-                <Link to="/en/blog/multi-cook-podgorica-cornogoriia">
-                  <h3 className="article__title">
-                    MULTI COOK (Подґоріца, Чорногорія) – домашні страви для
-                    сімейного затишку
-                  </h3>
-                </Link>
-                <time className="article__date date" dateTime="2024-08-10">
-                  10.08.2024
-                </time>
-              </div>
-            </article>
-          </div>
-          <Link to="/en/blog" className="articles__btn btn btn-gray">
-            All articles
-          </Link>
         </div>
       </section>
+
       <Map />
     </main>
   );

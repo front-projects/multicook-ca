@@ -1597,7 +1597,7 @@ main {
   content: attr(data-content);
   font-size: 18px;
   line-height: 120%;
-  color: #c41d18;
+  color: #8f5633;
   clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
   transition:
     clip-path 0.4s ease,
@@ -1609,7 +1609,7 @@ main {
   }
 }
 .hover:hover {
-  color: #c41d18;
+  color: #8f5633;
 }
 .hover:hover:before {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -2279,7 +2279,7 @@ p a:hover {
 }
 .location__icon {
   display: block;
-  color: #c41d18;
+  color: #8f5633;
 }
 .nav-list {
   display: flex;
@@ -2311,7 +2311,7 @@ p a:hover {
 }
 .nav-list__link.active {
   font-weight: 700;
-  color: #c41d18;
+  color: #8f5633;
 }
 .dropdown {
   width: 100%;
@@ -2429,10 +2429,10 @@ p a:hover {
 }
 .socials-list__icon:hover,
 .socials-list__icon--red {
-  color: #c41d18;
+  color: #8f5633;
 }
 .socials-list__icon--red:hover {
-  color: #9d120e;
+  color: #8f5633;
 }
 .card-benefit {
   display: flex;
@@ -2949,7 +2949,7 @@ p a:hover {
   color: #fff;
 }
 .tabs__btn.active:hover {
-  color: #c41d18;
+  color: #8f5633;
 }
 .tabs-pills {
   display: flex;
@@ -3512,7 +3512,7 @@ input[type*='radio'] {
   color: #eaeaea;
 }
 .status--red {
-  color: #c41d18;
+  color: #8f5633;
 }
 .status--green {
   color: #219653;
@@ -4484,7 +4484,7 @@ input[type*='radio'] {
     0.4s ease;
 }
 .header-mobile__action:hover > span {
-  color: #c41d18;
+  color: #8f5633;
 }
 .header-mobile__action:hover > span:before {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -4530,7 +4530,7 @@ input[type*='radio'] {
   justify-content: space-between;
   font-weight: 600;
   line-height: 120%;
-  color: #c41d18;
+  color: #8f5633;
 }
 .header-mobile__checked:first-child {
   margin-top: 0;
@@ -4691,6 +4691,7 @@ input[type*='radio'] {
     margin-top: 20px;
     max-width: 635px;
     width: 100%;
+    align-self: center;
   }
 }
 @media (max-width: 768px) {
@@ -4699,13 +4700,15 @@ input[type*='radio'] {
     max-width: 100%;
   }
 }
-@media (max-width: 768px) {
-  .banner__content p {
+@media (max-width: 1220px) {
+  .banner__content p,
+  .banner__content h1 {
     text-align: center;
   }
 }
 .banner__title {
   position: relative;
+  font-size: 48px;
 }
 @media (max-width: 768px) {
   .banner__title {
@@ -4722,8 +4725,8 @@ input[type*='radio'] {
   }
 }
 .banner-img {
-  height: 390px;
-  width: 390px;
+  height: 420px;
+  min-width: 570px;
   position: relative;
   margin-right: 25px;
 }
@@ -4734,8 +4737,8 @@ input[type*='radio'] {
 }
 @media (max-width: 768px) {
   .banner-img {
-    width: 185px;
-    height: 180px;
+    min-width: 90vw;
+    height: 270px;
   }
 }
 .banner-img__like-red {
@@ -5796,11 +5799,11 @@ input[type*='radio'] {
   }
 }
 .menu {
-  margin-top: 220px;
+  margin-top: 10px;
 }
 @media (max-width: 768px) {
   .menu {
-    margin-top: 190px;
+    margin-top: 10px;
   }
 }
 .menu__text {
@@ -5834,9 +5837,10 @@ input[type*='radio'] {
   }
 }
 .records {
+  margin-top: 100px;
   position: relative;
 }
-.records:before {
+/* .records:before {
   content: '';
   position: absolute;
   background-image: url(../images/bg-products-2-07d56fcc.svg);
@@ -5846,7 +5850,7 @@ input[type*='radio'] {
   right: -160px;
   top: -200px;
   transform: rotate(8deg);
-}
+} */
 @media (max-width: 768px) {
   .records:before {
     right: initial;
@@ -5878,7 +5882,7 @@ input[type*='radio'] {
   bottom: 0;
   width: 300%;
   height: 100%;
-  background-color: #c41d18;
+  background-color: rgba(173, 136, 101,.5);
   border-radius: 0 150px 150px 0;
 }
 .records__title .title {
@@ -6352,16 +6356,16 @@ input[type*='radio'] {
 }
 .sidebar-mobile__link.active,
 .sidebar-mobile__link:hover {
-  color: #c41d18;
+  color: #8f5633;
 }
 .sidebar-mobile__link.active .sidebar-mobile__icon,
 .sidebar-mobile__link:hover .sidebar-mobile__icon {
-  color: #c41d18;
-  border-color: #c41d18;
+  color: #8f5633;
+  border-color: #8f5633;
 }
 .sidebar-mobile__link.active .burger__line,
 .sidebar-mobile__link:hover .burger__line {
-  background-color: #c41d18;
+  background-color: #8f5633;
 }
 .sidebar-mobile__icon {
   width: 28px;
@@ -9654,4 +9658,15 @@ input[type*='radio'] {
 }
 .companies__cards {
   margin-top: 15px;
+}
+
+#about-us-link,
+#about-us-link-mob {
+  color: white !important;
+  font-weight: 400 !important;
+}
+
+
+#about-us-link:hover{
+  color:#8f5633!important;
 }

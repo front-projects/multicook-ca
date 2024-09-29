@@ -2,7 +2,7 @@ import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 import { Link } from 'react-router-dom';
 import { darkTheme } from './DarkTheme';
 import { useEffect, useState } from 'react';
-import { getStores } from '../../utils/getStores';
+import { getStores } from '../../utils/requests';
 import Select from 'react-select';
 import { customStyles } from './CustomStyles';
 import { CiSearch } from 'react-icons/ci';
@@ -23,20 +23,35 @@ export default function Map({ search }) {
     borderRadius: '50px',
     marginTop: '20px',
   };
-  const center = { lat: 55.765621409256326, lng: -105.89381747975074 };
+  const center = { lat: 43.61663452743724, lng: -79.48799478021704 };
 
   useEffect(() => {
     const fetchData = async () => {
       const data = await getStores();
       let arr = [];
-      data.forEach((store) => {
+      const array = Object.entries(data).map(([key, value]) => {
+        return {
+          id:key,
+          ...value,
+          position: {
+            lat: +value.lat,
+            lng: +value.lan,
+          }
+        };
+      });
+      console.log(array)
+
+      array.forEach((store) => {
         arr.push({
-          value: store.position,
+          value: {
+            lat: +store.lat,
+            lng: +store.lan,
+          },
           label: `${store.city}, ${store.address}`,
         });
       });
       setOptions(arr);
-      setMarkers(data);
+      setMarkers(array);
     };
     fetchData();
   }, []);
@@ -52,7 +67,7 @@ export default function Map({ search }) {
         });
         googleMarker.addListener('click', () => {
           map.setCenter(marker.position);
-          map.setZoom(10);
+          map.setZoom(15);
         });
       });
     }
@@ -60,7 +75,7 @@ export default function Map({ search }) {
 
   const changeStore = (e) => {
     map.setCenter(e.value);
-    map.setZoom(10);
+    map.setZoom(15);
   };
 
   return (
@@ -75,7 +90,7 @@ export default function Map({ search }) {
           {!search && (
             <Link
               to="/en/shops"
-              className={`map-main__btn map-main__btn--desk btn btn-red`}
+              className={`map-main__btn map-main__btn--desk btn bg-[#8f5633] hover:bg-[#8f5633]/50 rounded-xl`}
             >
               Search
             </Link>
@@ -92,7 +107,7 @@ export default function Map({ search }) {
               streetViewControl: false,
               zoomControl: false,
             }}
-            zoom={6}
+            zoom={8}
             onLoad={(map) => setMap(map)}
             onUnmount={() => setMap(null)}
           >
@@ -128,29 +143,6 @@ export default function Map({ search }) {
                         IndicatorSeparator: null,
                       }}
                     ></Select>
-
-                    {/* <ul className="dropdown-list" data-list="shops">
-                      <li className="hide">
-                        <button
-                          type="button"
-                          className="dropdown-list__link"
-                          data-id="10"
-                          data-btn="shops"
-                        >
-                          Wroclaw, Sieradzka, 7
-                        </button>{' '}
-                      </li>
-                      <li className="hide">
-                        <button
-                          type="button"
-                          className="dropdown-list__link"
-                          data-id="169"
-                          data-btn="shops"
-                        >
-                          Batumi, Batumi. Vakhtang Gorgasali str. 147
-                        </button>{' '}
-                      </li>
-                    </ul> */}
                   </div>
                 </div>
               </div>
@@ -163,7 +155,7 @@ export default function Map({ search }) {
       {!search && (
         <Link
           to="/en/shops"
-          className="map-main__btn map-main__btn--mobile btn btn-red"
+          className="map-main__btn map-main__btn--mobile btn bg-[#8f5633] hover:bg-[#8f5633]/50 rounded-xl"
         >
           Search
         </Link>
