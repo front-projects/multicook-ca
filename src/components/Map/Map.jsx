@@ -7,6 +7,8 @@ import Select from 'react-select';
 import { customStyles } from './CustomStyles';
 import { CiSearch } from 'react-icons/ci';
 
+// const API_KEY = process.env.REACT_APP_API_KEY;
+
 export default function Map({ search }) {
   const [markers, setMarkers] = useState();
   const [options, setOptions] = useState();
@@ -31,15 +33,15 @@ export default function Map({ search }) {
       let arr = [];
       const array = Object.entries(data).map(([key, value]) => {
         return {
-          id:key,
+          id: key,
           ...value,
           position: {
             lat: +value.lat,
             lng: +value.lan,
-          }
+          },
         };
       });
-      console.log(array)
+      console.log(array);
 
       array.forEach((store) => {
         arr.push({

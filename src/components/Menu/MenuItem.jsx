@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 export default function MenuItem({ product, to, category }) {
   const [view, setView] = useState();
 
-  console.log(product);
   return (
     <Link
       onMouseEnter={() => setView(true)}
