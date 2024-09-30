@@ -31,7 +31,7 @@ export default function ProductPageEn() {
   if (!activeProduct) {
     return (
       <main className="page__main">
-        <section className="produce">
+        <section className="produce min-h-[100vh]">
           <div className="container">No product</div>
         </section>
       </main>
@@ -40,7 +40,7 @@ export default function ProductPageEn() {
 
   return (
     <main className="page__main">
-      <section className="produce min-h-[100vh]">
+      <section className="produce">
         <div className="container">
           <Link to={`/en/menu/${category}`} className="flex items-center gap-2">
             <IoChevronBackOutline />
