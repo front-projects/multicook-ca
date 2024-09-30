@@ -7,10 +7,9 @@ import Select from 'react-select';
 import { customStyles } from './CustomStyles';
 import { CiSearch } from 'react-icons/ci';
 
-const API_KEY = import.meta.env.GOOGLE_API_KEY;
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 export default function Map({ search }) {
-  console.log(API_KEY)
   const [markers, setMarkers] = useState();
   const [options, setOptions] = useState();
 
