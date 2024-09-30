@@ -32,7 +32,6 @@ export default function ShopsEn() {
       }, {})
     : [];
 
-  console.log(groupedData);
 
   return (
     <main className="page__main">
