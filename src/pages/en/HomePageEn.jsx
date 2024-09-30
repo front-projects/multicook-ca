@@ -60,9 +60,7 @@ export default function HomePageEn() {
               Homemade semi-finished products from Galya Baluvana. We cook - you
               relax
             </p>
-            <p className='mt-2 font-bold'>
-            2340 Lake Shore Blvd West, Toronto 
-            </p>
+            <p className="mt-2 font-bold">2340 Lake Shore Blvd West, Toronto</p>
             <div className="banner__btns btns">
               <Link
                 to="#"
@@ -86,7 +84,7 @@ export default function HomePageEn() {
         </div>
       </section>
       <section className="menu mb-10">
-        <div className='menu__container container'>
+        <div className="menu__container container">
           <div className="shops__content">
             <h2 className="title title-lg">Our stores</h2>
             <div>
@@ -162,7 +160,7 @@ export default function HomePageEn() {
               />
             </div>
           </div>
-          <div className="menu__btns" id="about-us">
+          <div className="menu__btns">
             <Link
               to="/en/menu"
               className="menu__btn btn bg-[#8f5633] hover:bg-[#8f5633]/50 rounded-xl"
@@ -172,7 +170,7 @@ export default function HomePageEn() {
           </div>
         </div>
       </section>
-
+      <div id="about-us" className='h-[10px]'></div>
       <section className="records">
         <div className="records__container container">
           <div className="records__title">
