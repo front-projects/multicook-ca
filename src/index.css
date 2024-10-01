@@ -2813,7 +2813,7 @@ p a:hover {
   transform: rotate(-180deg);
 }
 .search-map {
-  background-color: #212121;
+  background-color: #ad8865;
   border-radius: 10px;
   box-shadow: 0 4px 40px #ffffff0a;
   padding: 30px 25px;
@@ -6456,7 +6456,7 @@ input[type*='radio'] {
   .shops__search {
     max-width: 450px;
     width: 100%;
-    top: 10px;
+    top: 20px;
   }
 }
 .shops__content {

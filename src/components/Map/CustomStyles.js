@@ -5,10 +5,11 @@ export const customStyles = {
   }),
   control: (provided) => ({
     ...provided,
-    backgroundColor: '#1e1e1e', // Dark background color
-    border: '1px solid #333', // Border similar to the image
+    backgroundColor: '#white', // Dark background color
+    border: '1px solid #fff', // Border similar to the image
     borderRadius: '20px', // Rounded corners
     boxShadow: 'none',
+    fontSize: '16px',
     padding: '5px 10px',
     '&:hover': {
       borderColor: '#555', // Slightly lighter border on hover
