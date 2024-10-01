@@ -170,8 +170,8 @@ export default function HomePageEn() {
           </div>
         </div>
       </section>
-      <div id="about-us" className='h-[10px]'></div>
-      <section className="records">
+      {/* <div  className='h-[10px]'></div> */}
+      <section className="records" id="about-us">
         <div className="records__container container">
           <div className="records__title">
             <h2 className="title title-md">Our advantages</h2>

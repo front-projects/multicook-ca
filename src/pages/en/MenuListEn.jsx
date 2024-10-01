@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { getProductsByCategory } from '../../utils/requests';
 import MenuItem from '../../components/Menu/MenuItem';
+import Loading from '../../components/UI/Loading';
 
 export default function StandardProductPage() {
   const { product } = useParams();
@@ -19,7 +20,9 @@ export default function StandardProductPage() {
     <>
       {products ? (
         Object.entries(products).map(([key, value]) => {
-          return <MenuItem product={value} to={key} key={key} category={product}/>;
+          return (
+            <MenuItem product={value} to={key} key={key} category={product} />
+          );
         })
       ) : (
         <div>No products</div>

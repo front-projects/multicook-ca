@@ -181,7 +181,7 @@ export default function HeaderEn() {
               <li>
                 <NavLink
                   to="/en#about-us"
-                  className={`nav-list__link hover ${({ isActive }) => (isActive ? 'text-red-600' : '')}`}
+                  className={`nav-list__link hover`}
                   id="about-us-link-mob"
                   data-content="About Us"
                 >
