@@ -63,13 +63,13 @@ export const customStyles = {
   }),
   option: (provided, state) => ({
     ...provided,
-    backgroundColor: state.isFocused ? '#333' : '#1e1e1e', // Lighter background on hover
-    color: '#fff', // White text color
+    backgroundColor: state.isFocused ? '#ad8865' : '#fff', // Lighter background on hover
+    color: 'black', // White text color
     padding: '10px 20px',
     fontSize: ' 14px',
     cursor: 'pointer',
     '&:hover': {
-      backgroundColor: '#333', // Hover effect
+      backgroundColor: '#ad8865', // Hover effect
     },
   }),
 };
