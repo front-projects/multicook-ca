@@ -2,10 +2,9 @@ import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import ChangeLanguage from './ChangeLanguage';
 
-export default function HeaderEn() {
+export default function HeaderUa() {
   const [open, setOpen] = useState();
   const location = useLocation();
-  
   useEffect(() => {
     // Розділяємо хеш, якщо він містить додатковий елемент після маршруту
     const hashParts = location.hash.split('#');
@@ -21,7 +20,7 @@ export default function HeaderEn() {
   return (
     <header className={`header ${open ? 'open' : ''}`} data-block="header">
       <nav className="header__container container nav">
-        <Link to="/en" className="logo" onClick={() => scrollTo(0, 0)}>
+        <Link to="/ua" className="logo" onClick={() => scrollTo(0, 0)}>
           <img
             alt="Головна"
             decoding="async"
@@ -33,35 +32,35 @@ export default function HeaderEn() {
         <ul className="header__list nav-list">
           <li>
             <NavLink
-              to="/en/shops"
+              to="/ua/shops"
               className={`nav-list__link hover ${({ isActive }) => (isActive ? 'text-red-600 font-bold' : '')}`}
             >
-              Shops
+              Магазини
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="/en/menu"
+              to="/ua/menu"
               className={`nav-list__link hover ${({ isActive }) => (isActive ? 'text-red-600' : '')}`}
             >
-              Menu
+              Меню
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="/en#about-us"
+              to="/ua#about-us"
               className={`nav-list__link hover`}
               id="about-us-link"
             >
-              About<span className="ml-2">Us</span>
+              Про<span className="ml-2">нас</span>
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="/en/contacts"
+              to="/ua/contacts"
               className={`nav-list__link hover ${({ isActive }) => (isActive ? 'text-red-600' : '')}`}
             >
-              Contacts
+              Контакти
             </NavLink>
           </li>
         </ul>
@@ -115,39 +114,39 @@ export default function HeaderEn() {
             <ul className="nav-list" onClick={() => setOpen(false)}>
               <li>
                 <NavLink
-                  to="/en/shops"
+                  to="/ua/shops"
                   className={`nav-list__link hover ${({ isActive }) => (isActive ? 'text-red-600' : '')}`}
                   data-content="Shops"
                 >
-                  Shops
+                  Магазини
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to="/en/menu"
+                  to="/ua/menu"
                   className={`nav-list__link hover ${({ isActive }) => (isActive ? 'text-red-600' : '')}`}
                   data-content="Menu"
                 >
-                  Menu
+                  Меню
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to="/en#about-us"
+                  to="/ua#about-us"
                   className={`nav-list__link hover`}
                   id="about-us-link-mob"
                   data-content="About Us"
                 >
-                  About Us
+                  Про нас
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to="/en/contacts"
+                  to="/ua/contacts"
                   className={`nav-list__link hover ${({ isActive }) => (isActive ? 'text-red-600' : '')}`}
                   data-content="Contacts"
                 >
-                  Contacts
+                  Контакти
                 </NavLink>
               </li>
             </ul>

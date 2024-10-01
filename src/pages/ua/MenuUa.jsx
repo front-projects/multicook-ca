@@ -1,24 +1,24 @@
 import { useState } from 'react';
-import { Outlet} from 'react-router-dom';
-import MenuNavigation from '../../components/Menu/Navigation';
+import { Outlet } from 'react-router-dom';
 import { CategoriesIcon } from '../../components/UI/icons';
+import MenuNavigationUa from '../../components/Menu/NavigationUa';
 
-export default function StandardMenu() {
+export default function StandardMenuUa() {
   const [open, setOpen] = useState(false);
- 
+
   return (
     <main className="page__main">
       <section className="menu-page min-h-[100vh]">
         <div className="container">
           <div className="menu-page__top">
-            <h2 className="title title-lg">Menu Galya Baluvana</h2>
+            <h2 className="title-ua title-lg">Меню Галі Балуваної</h2>
           </div>
 
           <div className="flex mt-10 gap-4 max-sm:flex-col">
-            <MenuNavigation open={open} onClose={()=> setOpen(false)}/>
+            <MenuNavigationUa open={open} onClose={()=> setOpen(false)}/>
             <div className="flex items-center gap-2 sm:hidden" onClick={()=> setOpen(!open)}>
               <CategoriesIcon />
-              Categories
+              Категорії
             </div>
             <div className="grid grid-cols-3 w-max gap-10 h-max max-[1200px]:grid-cols-2 max-sm:w-[90vw]">
               <Outlet />

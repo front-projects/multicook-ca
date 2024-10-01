@@ -13,6 +13,13 @@ import StandardProductPage from './pages/en/MenuListEn';
 import ProductPageEn from './pages/en/ProductPageEn';
 import axios from 'axios';
 import { useEffect } from 'react';
+import LayoutUa from './pages/ua/LayoutUa';
+import HomePageUa from './pages/ua/HomePageUa';
+import ShopsUa from './pages/ua/ShopsUa';
+import StandardMenuUa from './pages/ua/MenuUa';
+import StandardProductPageUa from './pages/ua/MenuListUa';
+import ProductPageUa from './pages/ua/ProductPageUa';
+import ContactsUa from './pages/ua/ContactsUa';
 
 function App() {
   useEffect(()=>{
@@ -22,31 +29,40 @@ function App() {
 
     fetchData();
   },[])
+
+  const lang = localStorage.getItem('lang');
   
   return (
     <Router>
       <Routes>
-        <Route path="*" element={<Navigate to="/en" />} />
+        <Route path="*" element={<Navigate to={`${lang ? "/" + lang : "/en"}`} />} />
         <Route path="/en" element={<LayoutEn />}>
           <Route index element={<HomePageEn />} />
           <Route path="menu" element={<StandardMenu/>}>
-            {/* <Route index element={<Navigate to="standard-menu" />} /> */}
-            {/* <Route path="standard-menu" element={<StandardMenu />}> */}
               <Route index element={<Navigate to="pierogy" />} />
               <Route path=":product" element={<StandardProductPage />} />
-            {/* </Route> */}
           </Route>
           <Route path="product"
           >
             <Route path=":product" element={<ProductPageEn />} />
           </Route>
-          {/* <Route path="franchise" element={<FranchiseEn />} />
-          <Route path="blog" >
-            <Route index element={<BlogEn />} />
-            <Route path=":blog" element={<BlogPageEn />} />
-          </Route > */}
+      
           <Route path="shops" element={<ShopsEn />} />
           <Route path="contacts" element={<ContactsEn />} />
+        </Route>
+        <Route path="/ua" element={<LayoutUa />}>
+          <Route index element={<HomePageUa />} />
+          <Route path="menu" element={<StandardMenuUa/>}>
+              <Route index element={<Navigate to="pierogy" />} />
+              <Route path=":product" element={<StandardProductPageUa />} />
+          </Route>
+          <Route path="product"
+          >
+            <Route path=":product" element={<ProductPageUa />} />
+          </Route>
+      
+          <Route path="shops" element={<ShopsUa />} />
+          <Route path="contacts" element={<ContactsUa />} />
         </Route>
       </Routes>
     </Router>

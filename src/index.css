@@ -1470,6 +1470,14 @@ main {
   line-height: 120%;
   color: #171717;
 }
+.title-ua {
+  font-family: Luckiest Guy cyrillic;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: 120%;
+  color: #171717;
+}
+
 @media (max-width: 768px) {
   .title {
     font-size: 48px;
@@ -4715,10 +4723,18 @@ input[type*='radio'] {
   position: relative;
   font-size: 48px;
 }
+.banner__title-ua {
+  position: relative;
+  font-size: 40px;
+}
 @media (max-width: 768px) {
   .banner__title {
     text-align: center;
     font-size: 42px;
+  }
+  .banner__title-ua {
+    text-align: center;
+    font-size: 36px;
   }
 }
 .banner__btns {

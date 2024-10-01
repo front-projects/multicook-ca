@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function FooterEn() {
+export default function FooterUa() {
   return (
     <footer className="footer">
       <div className="container footer__container">
@@ -9,7 +9,7 @@ export default function FooterEn() {
             <use xlinkHref="images/mc-logo-white.svg#mc-logo-white"></use>
           </svg>
         </Link> */}
-        <Link to="/en" className="logo" onClick={() => scrollTo(0, 0)}>
+        <Link to="/ua" className="logo" onClick={() => scrollTo(0, 0)}>
           <img
             alt="Головна"
             decoding="async"
@@ -24,34 +24,34 @@ export default function FooterEn() {
 
         <dl className="footer__content">
           <div className="footer-block">
-            <dt className="footer-block__title">Navigation</dt>
+            <dt className="footer-block__title">Навігація</dt>
             <dd className="footer-block__list">
               <ul className="footer-list footer-list--col">
                 <li>
                   <Link
-                    to="/en/shops"
+                    to="/ua/shops"
                     className="footer-list__link hover"
-                    data-content="Shops"
+                    data-content="Магазини"
                   >
-                    Shops
+                    Магазини
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/en/menu"
+                    to="/ua/menu"
                     className="footer-list__link hover"
-                    data-content="Menu"
+                    data-content="Меню"
                   >
-                    Menu
+                    Меню
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/en#about-us"
+                    to="/ua#about-us"
                     className="footer-list__link hover"
-                    data-content="About Us"
+                    data-content="Про нас"
                   >
-                    About Us
+                    Про нас
                   </Link>
                 </li>
                 {/* <li>
@@ -65,45 +65,45 @@ export default function FooterEn() {
                 </li> */}
                 <li>
                   <Link
-                    to="/en/contacts"
+                    to="/ua/contacts"
                     className="footer-list__link hover"
-                    data-content="Contacts"
+                    data-content="Контакти"
                   >
-                    Contacts
+                    Контакти
                   </Link>
                 </li>
               </ul>
             </dd>
           </div>
           <div className="footer-block">
-            <dt className="footer-block__title">Catalog</dt>
+            <dt className="footer-block__title">Каталог</dt>
             <dd className="footer-block__list">
               <ul className="footer-list">
                 <li>
                   <Link
-                    to="/en/menu/pierogy"
+                    to="/ua/menu/pierogy"
                     className="footer-list__link hover"
-                    data-content="Varenyky"
+                    data-content="Вареники"
                   >
-                    Varenyky
+                    Вареники
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/en/menu/sirniki"
+                    to="/ua/menu/sirniki"
                     className="footer-list__link hover"
-                    data-content="Syrnyky (cheese pancakes)"
+                    data-content="Сирники"
                   >
-                    Syrnyky (cheese pancakes)
+                    Сирники
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/en/menu/crepes"
+                    to="/ua/menu/crepes"
                     className="footer-list__link hover"
-                    data-content="Crepes"
+                    data-content="Млинці"
                   >
-                    Crepes
+                    Млинці
                   </Link>
                 </li>
               
@@ -120,38 +120,38 @@ export default function FooterEn() {
               <ul className="footer-list">
                 <li>
                   <Link
-                    to="/en/menu/dumplings"
+                    to="/ua/menu/dumplings"
                     className="footer-list__link hover"
-                    data-content="Pelmeni (dumplings)"
+                    data-content="Пельмені"
                   >
-                    Pelmeni (dumplings)
+                    Пельмені
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/en/menu/chebureki"
+                    to="/ua/menu/chebureki"
                     className="footer-list__link hover"
-                    data-content="Сhebureki"
+                    data-content="Чебуреки"
                   >
-                    Сhebureki
+                    Чебуреки
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/en/menu/cutlets"
+                    to="/ua/menu/cutlets"
                     className="footer-list__link hover"
-                    data-content="Cutlets and Meatball"
+                    data-content="Котлети"
                   >
-                    Cutlets and Meatball
+                    Котлети
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/en/menu/cabbage-rolls"
+                    to="/ua/menu/cabbage-rolls"
                     className="footer-list__link hover"
-                    data-content="Cabbage rolls"
+                    data-content="Голубці"
                   >
-                    Cabbage rolls
+                    Голубці
                   </Link>
                 </li>
                 {/* <li>
@@ -167,7 +167,7 @@ export default function FooterEn() {
             </dd>
           </div>
           <div className="footer-block">
-            <dt className="footer-block__title">Social media</dt>
+            <dt className="footer-block__title">Соціальні мережі</dt>
             <dd className="footer-block__socials">
               <ul className="socials-list">
                 <li>
@@ -209,7 +209,7 @@ export default function FooterEn() {
         </dl>
       </div>
       <div className="copyright">
-        Galya Baluvana
+        Галя Балувана
         ©<b>2024</b>
       </div>
     </footer>
