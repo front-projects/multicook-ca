@@ -8,7 +8,7 @@ export default function MenuItem({ product, to, category }) {
     <Link
       onMouseEnter={() => setView(true)}
       onMouseLeave={() => setView(false)}
-      className="w-full text-[18px] h-full"
+      className="w-full text-[18px] h-full h-max"
       to={`/en/product/${to}?category=${category}`}
     >
       <div className="flex flex-col gap-2 w-[240px] relative max-sm:w-full h-max">
