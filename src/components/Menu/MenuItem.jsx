@@ -11,7 +11,7 @@ export default function MenuItem({ product, to, category }) {
       className="w-full text-[18px] h-full"
       to={`/en/product/${to}?category=${category}`}
     >
-      <div className="flex flex-col gap-2 w-[240px] relative max-sm:w-full">
+      <div className="flex flex-col gap-2 w-[240px] relative max-sm:w-full h-max">
         {view && (
           <div
             className={`absolute top-2 right-4 bg-[#8f5633] px-4 rounded-md transform transition-transform duration-500 ease-in-out ${
