@@ -20,7 +20,7 @@ export default function StandardMenuUa() {
               <CategoriesIcon />
               Категорії
             </div>
-            <div className="grid grid-cols-3 w-max gap-10 h-max max-[1200px]:grid-cols-2 max-sm:w-[90vw]">
+            <div className="grid grid-cols-3 w-max gap-10 h-max max-[1200px]:grid-cols-2 max-sm:w-[90vw] max-h-max">
               <Outlet />
             </div>
           </div>
