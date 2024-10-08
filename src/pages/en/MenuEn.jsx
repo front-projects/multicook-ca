@@ -11,7 +11,7 @@ export default function StandardMenu() {
       <section className="menu-page min-h-[100vh]">
         <div className="container">
           <div className="menu-page__top">
-            <h2 className="title title-lg">Menu Galya Baluvana</h2>
+            <h2 className="title title-lg">Menu Multicook</h2>
           </div>
 
           <div className="flex mt-10 gap-4 max-sm:flex-col">

@@ -57,7 +57,7 @@ export default function HomePageUa() {
               Доставка домашніх напівфабрикатів
             </h1>
             <p className="text-[22px] mt-10">
-              Домашні напівфабрикати від Галя Балувана. Ми готуємо — ви
+              Домашні напівфабрикати від Multicook. Ми готуємо — ви
               відпочиваєте!
             </p>
             <p className="mt-2 font-bold">2340 Lake Shore Blvd West, Toronto</p>
@@ -114,7 +114,7 @@ export default function HomePageUa() {
 
       <section className="menu">
         <div className="menu__container container">
-          <h2 className="menu__title title-ua title-lg">Меню Галі Балуваної</h2>
+          <h2 className="menu__title title-ua title-lg">Меню Multicook</h2>
           <p className="menu__text mt-2">
             Для того, щоб побачити меню з цінами, потрібно перейти в розділ
             «Меню»
@@ -205,7 +205,7 @@ export default function HomePageUa() {
           <div className="flex w-full mt-10 text-[16px] max-sm:flex-col max-sm:gap-4">
             <div className="border-l-2 border-[#AD8865] w-1/2 pl-4 pr-10 flex flex-col gap-4 max-sm:w-full">
               <p>
-                Наші магазини Галя Балувана – це магазини справжніх домашніх
+                Наші магазини Multicook – це магазини справжніх домашніх
                 напівфабрикатів.
               </p>
               <p>

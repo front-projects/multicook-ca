@@ -57,7 +57,7 @@ export default function HomePageEn() {
               Delivery of homemade semi-finished products
             </h1>
             <p className="text-[24px] mt-10">
-              Homemade semi-finished products from Galya Baluvana. We cook - you
+              Homemade semi-finished products from Multicook. We cook - you
               relax
             </p>
             <p className="mt-2 font-bold">2340 Lake Shore Blvd West, Toronto</p>
@@ -112,7 +112,7 @@ export default function HomePageEn() {
 
       <section className="menu">
         <div className="menu__container container">
-          <h2 className="menu__title title title-lg">Menu Galya Baluvana</h2>
+          <h2 className="menu__title title title-lg">Menu Multicook</h2>
           <p className="menu__text">
             In order to see the menu with prices, you need to go to the «Menu»
           </p>
@@ -203,7 +203,7 @@ in the open kitchen"
           <div className="flex w-full mt-10 text-[18px] max-sm:flex-col max-sm:gap-4">
             <div className="border-l-2 border-[#AD8865] w-1/2 pl-4 pr-10 flex flex-col gap-4 max-sm:w-full">
               <p>
-                Our Galya Baluvana stores are stores of real homemade
+                Our Multicook stores are stores of real homemade
                 semi-finished products.
               </p>
               <p>

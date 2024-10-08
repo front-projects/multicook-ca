@@ -11,7 +11,7 @@ export default function StandardMenuUa() {
       <section className="menu-page min-h-[100vh]">
         <div className="container">
           <div className="menu-page__top">
-            <h2 className="title-ua title-lg">Меню Галі Балуваної</h2>
+            <h2 className="title-ua title-lg">Меню Multicook</h2>
           </div>
 
           <div className="flex mt-10 gap-4 max-sm:flex-col">

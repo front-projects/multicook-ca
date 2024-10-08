@@ -209,7 +209,7 @@ export default function FooterEn() {
         </dl>
       </div>
       <div className="copyright">
-        Galya Baluvana
+        Multicook
         ©<b>2024</b>
       </div>
     </footer>

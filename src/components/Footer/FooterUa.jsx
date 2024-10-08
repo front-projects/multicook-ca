@@ -209,7 +209,7 @@ export default function FooterUa() {
         </dl>
       </div>
       <div className="copyright">
-        Галя Балувана
+        Multicook
         ©<b>2024</b>
       </div>
     </footer>
