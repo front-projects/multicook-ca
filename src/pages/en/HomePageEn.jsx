@@ -62,12 +62,13 @@ export default function HomePageEn() {
             </p>
             <p className="mt-2 font-bold">2340 Lake Shore Blvd West, Toronto</p>
             <div className="banner__btns btns">
-              <Link
-                to="#"
+              <a
+                target='_blanc'
+                href="https://www.ubereats.com/ca/store/multicook/P918tAFBUVCuJ9902TKoZw?srsltid=AfmBOorHF1C3pyS2ZCfXSqbIlp3E-dcW9_cYT7wtwisZF94s5JDwMSDx"
                 className="btn hover:bg-[#8f5633]/50 rounded-xl bg-[#8f5633]"
               >
                 Order delivery
-              </Link>
+              </a>
               <Link to="/en/menu" className=" text-black">
                 Go to the menu
               </Link>
