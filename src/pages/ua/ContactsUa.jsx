@@ -26,8 +26,8 @@ export default function ContactsUa() {
                 <div className="contacts-block">
                   <dt className="contacts-block__title">Електронна пошта</dt>
                   <dd className="contacts-block__desc">
-                    <a href="mailto:cookmulti2340@gmail.com">
-                      cookmulti2340@gmail.com
+                    <a href="mailto:multicookmain@gmail.com">
+                      multicookmain@gmail.com
                     </a>
                   </dd>
                 </div>

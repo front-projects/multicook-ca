@@ -60,7 +60,7 @@ export default function HomePageEn() {
               Homemade semi-finished products from Multicook. We cook - you
               relax
             </p>
-            <p className="mt-2 font-bold">2340 Lake Shore Blvd West, Toronto</p>
+            <p className="mt-2 font-bold">1900 Dundas St E, Mississauga</p>
             <div className="banner__btns btns">
               <a
                 target='_blanc'
