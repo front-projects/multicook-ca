@@ -68,7 +68,7 @@ export default function ContactsUa() {
                       </li>
                       <li>
                         <a
-                          href="https://m.facebook.com/61561417168302/"
+                          href="https://www.facebook.com/share/g/14JzSZjMhw/?mibextid=K35XfP"
                           className="socials-list__link"
                           target="_blank"
                         >
@@ -82,7 +82,7 @@ export default function ContactsUa() {
                       </li>
                       <li>
                         <a
-                          href="https://www.instagram.com/multicook.ca?igsh=OXJ3bHphOTBuY3U3&utm_source=qr"
+                          href="https://www.instagram.com/multicook.ca/profilecard/?igsh=OXJ3bHphOTBuY3U3"
                           className="socials-list__link"
                           target="_blank"
                         >

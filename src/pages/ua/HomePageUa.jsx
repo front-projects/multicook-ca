@@ -60,7 +60,7 @@ export default function HomePageUa() {
               Домашні напівфабрикати від Multicook. Ми готуємо — ви
               відпочиваєте!
             </p>
-            <p className="mt-2 font-bold">1900 Dundas St E, Mississauga</p>
+            <p className="mt-2 font-bold">unit 9-11, 1900 Dundas St E, Mississauga</p>
             <div className="banner__btns btns">
               <a
                 target="_blanc"

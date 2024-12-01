@@ -68,7 +68,7 @@ export default function HeaderEn() {
 
         <div className="header__actions">
           <a
-            href="https://www.instagram.com/multicook.ca?igsh=OXJ3bHphOTBuY3U3&utm_source=qr"
+            href="https://www.instagram.com/multicook.ca/profilecard/?igsh=OXJ3bHphOTBuY3U3"
             className="socials-list__link"
             target="_blank"
           >
@@ -84,7 +84,7 @@ export default function HeaderEn() {
 
         <div className="flex gap-4 items-center ">
           <a
-            href="https://www.instagram.com/multicook.ca?igsh=OXJ3bHphOTBuY3U3&utm_source=qr"
+            href="https://www.instagram.com/multicook.ca/profilecard/?igsh=OXJ3bHphOTBuY3U3"
             className="socials-list__link sm:hidden"
             target="_blank"
           >
