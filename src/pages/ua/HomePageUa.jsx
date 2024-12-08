@@ -56,7 +56,7 @@ export default function HomePageUa() {
             <h1 className="banner__title-ua title-ua">
               Доставка домашніх напівфабрикатів
             </h1>
-            <p className="text-[22px] mt-10">
+            <p className="text-[22px] mt-10 text-gray-600">
               Домашні напівфабрикати від Multicook. Ми готуємо — ви
               відпочиваєте!
             </p>
