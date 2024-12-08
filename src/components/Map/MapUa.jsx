@@ -7,7 +7,7 @@ import Select from 'react-select';
 import { customStyles } from './CustomStyles';
 import { CiSearch } from 'react-icons/ci';
 
-const API_KEY = import.meta.env.VITE_API_KEY;
+const API_KEY = 'AIzaSyBwlA0IL5jq_aaG26s8quNxXHePK7ncPxk';
 
 export default function MapUa({ search }) {
   const [markers, setMarkers] = useState();
