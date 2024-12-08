@@ -64,7 +64,7 @@ export default function HomePageUa() {
             <div className="banner__btns btns">
               <a
                 target="_blanc"
-                href="https://www.ubereats.com/ca/store/multicook/P918tAFBUVCuJ9902TKoZw?srsltid=AfmBOorHF1C3pyS2ZCfXSqbIlp3E-dcW9_cYT7wtwisZF94s5JDwMSDx"
+                href="https://www.ubereats.com/ca/store/multicook-dundas/94Mt1Zo1VQCN5GR7qDU8MQ?srsltid=AfmBOorz2sz6SPDa9LmdoN47ohl2j-P1H4NKT_oBFix-u7Xi8lMFoJPg"
                 className="btn hover:bg-[#8f5633]/50 rounded-xl bg-[#8f5633]"
               >
                 Замовити доставку
